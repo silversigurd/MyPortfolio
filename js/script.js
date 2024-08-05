@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Scroll suave para los enlaces del navbar
+    // Smooth scroll for navbar links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -9,74 +9,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Efecto parallax para la sección de inicio
+    // Parallax effect for the intro section
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const parallax = document.querySelector('#inicio');
-        parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
-    });
-
-    // Animación de entrada para los elementos
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {threshold: 0.1});
-
-    document.querySelectorAll('.seccion').forEach(section => {
-        observer.observe(section);
-    });
-});
-
-// Añade la clase 'visible' a los elementos cuando entran en el viewport
-function handleScroll() {
-    const sections = document.querySelectorAll('.seccion');
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        const isVisible = (rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0);
-        if (isVisible) {
-            section.classList.add('visible');
+        if (parallax) {
+            parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
         }
     });
-}
 
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
-
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Carousel animation
     const carousel = document.querySelector('.carousel-container');
     const slide = document.querySelector('.carousel-slide');
-    
-    // Clonar los elementos para crear un efecto infinito
-    slide.innerHTML += slide.innerHTML;
 
-    let position = 0;
-    const speed = 1; // píxeles por frame
+    if (carousel && slide) {
+        // Clone elements for infinite effect
+        slide.innerHTML += slide.innerHTML;
 
-    function moveCarousel() {
-        position -= speed;
-        
-        // Si hemos desplazado todo el ancho original, reseteamos la posición
-        if (position <= -slide.offsetWidth / 2) {
-            position += slide.offsetWidth / 2;
+        let position = 0;
+        const speed = 1; // pixels per frame
+
+        function moveCarousel() {
+            position -= speed;
+
+            // Reset position when full width is scrolled
+            if (position <= -slide.offsetWidth / 2) {
+                position += slide.offsetWidth / 2;
+            }
+
+            carousel.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(moveCarousel);
         }
-        
-        carousel.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(moveCarousel);
+
+        moveCarousel();
     }
 
-    moveCarousel();
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    // Pausar el carrusel cuando el mouse está sobre él
-    carousel.addEventListener('mouseenter', () => {
-        speed = 0;
-    });
-
-    // Reanudar el carrusel cuando el mouse sale
-    carousel.addEventListener('mouseleave', () => {
-        speed = 1;
-    });
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            console.log('Menu button clicked');
+            navLinks.classList.toggle('active');
+        });
+    } else {
+        console.log('Menu button or nav links not found');
+    }
 });

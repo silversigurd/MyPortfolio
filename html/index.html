@@ -7,61 +7,70 @@
     <title>Mi Portafolio Personal</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">Tu Logo</div>
-            <ul>
-                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="#sobre-mi"><i class="fas fa-user"></i> Sobre Mí</a></li>
-                <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
-                <li><a href="#habilidades"><i class="fas fa-cogs"></i> Habilidades</a></li>
-                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            <div class="logo">Usuario</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> <span class="nav-text">Proyectos</span></a></li>
+                <li><a href="#sobre-mi"><i class="fas fa-user"></i> <span class="nav-text">Sobre Mí</span></a></li>
+                <li><a href="#habilidades"><i class="fas fa-cogs"></i> <span class="nav-text">Habilidades</span></a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> <span class="nav-text">Contacto</span></a></li>
             </ul>
         </nav>
     </header>
-
+    <div id="particles-js"></div>
     <main>
         <section id="inicio" class="seccion">
             <div class="contenido">
-                <h1>Bienvenido a mi Portafolio</h1>
-                <p>Soy Nicolas Ezequiel Sanchez, desarrollador Full-Stack.</p>
-                <a href="#proyectos" class="btn">Ver Proyectos</a>
+                <h1><span class="lang" key="welcome">Bienvenido a mi Portafolio</span></h1>
+                <p><span class="lang" key="intro">Soy Nicolas Ezequiel Sanchez, desarrollador Full-Stack.</span></p> 
             </div>
         </section>
 
-        <section id="proyectos" class="seccion2">
-            <h2>Mis Proyectos</h2>
-            <div class="proyecto">
-                <h3>Proyecto 1</h3>
-                <img src="../dist/images/fotoprueba.png" alt="Proyecto 1">
-                <p>Descripción del proyecto 1...</p>
+        <h2 style="text-align: center;">Mis Proyectos</h2>
+        <section id="proyectos" class="seccion">
+            <div class="proyectos-grid">
+                <div class="proyecto">
+                    <h3>Proyecto 1</h3>
+                    <img src="../dist/images/pato.jpg" alt="Proyecto 1">
+                    <p>Descripción del proyecto 1...</p>
+                </div>
+                <div class="proyecto">
+                    <h3>Proyecto 2</h3>
+                    <img src="../dist/images/pato.jpg" alt="Proyecto 2">
+                    <p>Descripción del proyecto 2...</p>
+                </div>
+                <div class="proyecto">
+                    <h3>Proyecto 3</h3>
+                    <img src="../dist/images/pato.jpg" alt="Proyecto 3">
+                    <p>Descripción del proyecto 3...</p>
+                </div>
+           
             </div>
-            <!-- Añade más proyectos aquí -->
         </section>
 
-        <section id="sobre-mi">
-            
-            <div class="col-md-12">
-                <h2 style="text-align: center;">Sobre mi</h2>
+        <section id="sobre-mi" class="seccion">
+            <div class="contenido">
+                <h2>Sobre mí</h2>
+                <div class="sobre-mi-texto">
+                    <p>Actualmente me desempeño como desarrollador de software y aplicaciones en la Dirección de Informática del Ministerio de Seguridad de la Provincia de Buenos Aires. En este rol, soy responsable de analizar y comprender los requerimientos tanto de clientes internos como externos, lo que me permite diseñar e implementar soluciones tecnológicas eficientes y a medida.</p>
+                    <p>Mi trabajo abarca desde la conceptualización y planificación de nuevas características hasta la codificación y puesta en marcha de las mismas, asegurando que los sistemas desarrollados cumplan con los más altos estándares de seguridad y rendimiento. Además, colaboro estrechamente con distintos equipos para garantizar que las soluciones tecnológicas no solo sean innovadoras, sino también alineadas con las necesidades estratégicas de la institución.</p>
+                    <p>Mi capacidad para adaptar rápidamente nuevas tecnologías y mi enfoque en la mejora continua me han permitido contribuir de manera significativa al éxito de los proyectos que lidero, siempre con el objetivo de mejorar la operatividad y la seguridad a través del desarrollo de software robusto y confiable.</p>
+                </div>
             </div>
-            <div class="col-md-4">
-                <p style="text-align: center; text-indent: 2em;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laborum sapiente reprehenderit,
-                    tempore enim perspiciatis, illo ullam veniam distinctio consequuntur dolores at animi aperiam voluptate
-                    dolore saepe sunt laboriosam error.</p>
-            </div>
-            
-            <!-- Añade más proyectos aquí -->
         </section>
 
         <section id="habilidades" class="seccion">
-
             <div class="contenido">
-                <div class="col-md-12">
-                    <h2 style="text-align: center;">Mis habilidades</h2>
-                </div>
+                <h2 style="text-align: center;">Mis conocimientos</h2>
                 <div class="carousel">
                     <div class="carousel-container">
                         <div class="carousel-slide">
@@ -83,18 +92,48 @@
             </div>
         </section>
 
-        <section id="contacto" class="seccion3">
-            <div>
-                <form>
-                    <h1>Informacion de Contacto</h1>
-                    <label for="nombre">Nombre: Nicolas Ezequiel Sanchez</label>
-                    <label for="Email">Correo Electronico: silversigurd@gmail.com</label>
-                    <label for="Telefono">Telefono: (+54) 0221-419 6043</label>
-                    <label for="nombre">linkedIn:</label>
-                    <div class="redes-sociales">
-                        <label for="Linedin"><a href="#"><i class="fab fa-linkedin"></i></a></label>
+        <section id="contacto" class="seccion">
+            <div class="contenido">
+                <h2>Información de Contacto</h2>
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <i class="fas fa-user"></i>
+                        <p><strong>Nombre:</strong> Nicolas Ezequiel Sanchez</p>
                     </div>
-                </form>
+                    <div class="contacto-item">
+                        <a href="mailto:silversigurd@gmail.com" class="contacto-link">
+                            <i class="fas fa-envelope"></i>
+                            <p><strong>Correo Electrónico:</strong> silversigurd@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="contacto-item">
+                        <a href="tel:+542214196043" class="contacto-link">
+                            <i class="fas fa-phone"></i>
+                            <p><strong>Teléfono:</strong> (+54) 0221-419 6043</p>
+                        </a>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+                    </div>
+                    <div class="contacto-item">
+                        <a href="https://www.linkedin.com/in/nicolás-ezequiel-sánchez-37a9a5205/" target="_blank" class="contacto-link">
+                            <i class="fab fa-linkedin"></i>
+                            <p><strong>LinkedIn:</strong> Nicolás Ezequiel Sánchez</p>
+                        </a>
+                    </div>
+                    <div class="contacto-item">
+                        <a href="https://github.com/silversigurd" target="_blank" class="contacto-link">
+                            <i class="fab fa-github"></i>
+                            <p><strong>GitHub:</strong> silversigurd</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacto-mensaje">
+                    <h3>¿Quieres contactarme?</h3>
+                    <p>Estoy siempre abierto a nuevas oportunidades y colaboraciones. No dudes en enviarme un mensaje.</p>
+                    <a href="mailto:silversigurd@gmail.com" class="btn">Enviar correo</a>
+                </div>
             </div>
         </section>
     </main>
@@ -109,6 +148,13 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script src="../js/lenguaje.js"></script>
+    <script src="../js/particles.js"></script>
+
+
+    <a href="https://wa.me/542214196043" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 
 </html>
