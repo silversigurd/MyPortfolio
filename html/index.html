@@ -14,43 +14,61 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Usuario</div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> <span class="nav-text">Proyectos</span></a></li>
-                <li><a href="#sobre-mi"><i class="fas fa-user"></i> <span class="nav-text">Sobre Mí</span></a></li>
-                <li><a href="#habilidades"><i class="fas fa-cogs"></i> <span class="nav-text">Habilidades</span></a></li>
-                <li><a href="#contacto"><i class="fas fa-envelope"></i> <span class="nav-text">Contacto</span></a></li>
-            </ul>
+          <div class="logo-container">
+            <div class="logo">
+              <span class="name">Nicolas Ezequiel Sanchez</span>
+              <div class="tagline">Full-Stack Developer</div>
+            </div>
+          </div>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            
+            <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> <span class="nav-text">Proyectos</span></a></li>
+            <li><a href="#sobre-mi"><i class="fas fa-user"></i> <span class="nav-text">Sobre Mí</span></a></li>
+            <li><a href="#habilidades"><i class="fas fa-cogs"></i> <span class="nav-text">Habilidades</span></a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> <span class="nav-text">Contacto</span></a></li>
+          </ul>
+          <button id="language-toggle-es" class="language-toggle">
+            <span class="nav-text"></span>
+            <span id="flag-icons">
+                <img src="../dist/images/logos/spain.png" alt="Español" class="flag-icon">
+            </span>
+        </button>
+        <button id="language-toggle-en" class="language-toggle">
+            <span class="nav-text"></span>
+            <span id="flag-icons">
+                <img src="../dist/images/logos/EEUU.png" alt="English" class="flag-icon">
+            </span>
+        </button>
         </nav>
-    </header>
+      </header>
     <div id="particles-js"></div>
     <main>
+        
         <section id="inicio" class="seccion">
             <div class="contenido">
                 <h1><span class="lang" key="welcome">Bienvenido a mi Portafolio</span></h1>
-                <p><span class="lang" key="intro">Soy Nicolas Ezequiel Sanchez, desarrollador Full-Stack.</span></p> 
             </div>
         </section>
 
-        <h2 style="text-align: center;">Mis Proyectos</h2>
+        <h2 style="text-align: center; color:rgb(205, 197, 197); ">Mis Proyectos</h2>
         <section id="proyectos" class="seccion">
             <div class="proyectos-grid">
                 <div class="proyecto">
                     <h3>Proyecto 1</h3>
-                    <img src="../dist/images/pato.jpg" alt="Proyecto 1">
+                    <img src="../dist/images/Gatito.PNG" alt="Proyecto 1">
                     <p>Descripción del proyecto 1...</p>
                 </div>
                 <div class="proyecto">
                     <h3>Proyecto 2</h3>
-                    <img src="../dist/images/pato.jpg" alt="Proyecto 2">
+                    <img src="../dist/images/Gatito.PNG" alt="Proyecto 2">
                     <p>Descripción del proyecto 2...</p>
                 </div>
                 <div class="proyecto">
                     <h3>Proyecto 3</h3>
-                    <img src="../dist/images/pato.jpg" alt="Proyecto 3">
+                    <img src="../dist/images/Gatito.PNG" alt="Proyecto 3">
                     <p>Descripción del proyecto 3...</p>
                 </div>
            
@@ -59,42 +77,47 @@
 
         <section id="sobre-mi" class="seccion">
             <div class="contenido">
-                <h2>Sobre mí</h2>
+                <h2 style="color:rgb(205, 197, 197) ">Sobre mí</h2>
                 <div class="sobre-mi-texto">
-                    <p>Actualmente me desempeño como desarrollador de software y aplicaciones en la Dirección de Informática del Ministerio de Seguridad de la Provincia de Buenos Aires. En este rol, soy responsable de analizar y comprender los requerimientos tanto de clientes internos como externos, lo que me permite diseñar e implementar soluciones tecnológicas eficientes y a medida.</p>
-                    <p>Mi trabajo abarca desde la conceptualización y planificación de nuevas características hasta la codificación y puesta en marcha de las mismas, asegurando que los sistemas desarrollados cumplan con los más altos estándares de seguridad y rendimiento. Además, colaboro estrechamente con distintos equipos para garantizar que las soluciones tecnológicas no solo sean innovadoras, sino también alineadas con las necesidades estratégicas de la institución.</p>
-                    <p>Mi capacidad para adaptar rápidamente nuevas tecnologías y mi enfoque en la mejora continua me han permitido contribuir de manera significativa al éxito de los proyectos que lidero, siempre con el objetivo de mejorar la operatividad y la seguridad a través del desarrollo de software robusto y confiable.</p>
+                    <p>
+                        Actualmente me desempeño como <strong>Desarrollador de Software y Aplicaciones</strong> en la 
+                        <strong>Dirección de Informática del Ministerio de Seguridad de la Provincia de Buenos Aires</strong>. 
+                        En este rol, soy responsable de analizar y comprender los requerimientos tanto de clientes internos como externos, 
+                        lo que me permite diseñar e implementar soluciones tecnológicas eficientes y a medida.
+                    </p>
+                    <p>
+                        Mi trabajo abarca desde la conceptualización y planificación de nuevas características hasta la codificación y 
+                        puesta en marcha de las mismas, asegurando que los sistemas desarrollados cumplan con los más altos estándares 
+                        de seguridad y rendimiento. Además, colaboro estrechamente con distintos equipos para garantizar que las soluciones 
+                        tecnológicas no solo sean innovadoras, sino también alineadas con las necesidades estratégicas de la institución.
+                    </p>
+                    <p>
+                        Mi capacidad para adaptar rápidamente nuevas tecnologías y mi enfoque en la mejora continua me han permitido 
+                        contribuir de manera significativa al éxito de los proyectos que lidero, siempre con el objetivo de mejorar la 
+                        operatividad y la seguridad a través del desarrollo de software robusto y confiable.
+                    </p>
                 </div>
+                
+                
             </div>
         </section>
 
         <section id="habilidades" class="seccion">
             <div class="contenido">
-                <h2 style="text-align: center;">Mis conocimientos</h2>
+                <h2 style="text-align: center; color: rgb(205, 197, 197)">Mis conocimientos</h2>
                 <div class="carousel">
                     <div class="carousel-container">
-                        <div class="carousel-slide">
-                            <img src="../dist/images/logos/aspx.png" alt="Aspx logo" title="Aspx">
-                            <img src="../dist/images/logos/bootstrap.png" alt="Bootstrap logo" title="Bootstrap">
-                            <img src="../dist/images/logos/csharp.png" alt="C# Logo" title="C#">
-                            <img src="../dist/images/logos/css.png" alt="CSS Logo" title="CSS">
-                            <img src="../dist/images/logos/git.png" alt="Git" title="Git">
-                            <img src="../dist/images/logos/github.png" alt="GitHub" title="GitHub">
-                            <img src="../dist/images/logos/gitlab.png" alt="GitLab" title="GitLab">
-                            <img src="../dist/images/logos/html.png" alt="HTML 5" title="HTML 5">
-                            <img src="../dist/images/logos/js.png" alt="JavaScript" title="JavaScript">
-                            <img src="../dist/images/logos/postman.png" alt="Postman" title="Postman">
-                            <img src="../dist/images/logos/net.png" alt=".NET" title=".NET">
-                            <img src="../dist/images/logos/sql.png" alt="SQL Server" title="SQL Server">
-                        </div>
+                        <div class="carousel-slide" id="carousel-slide"></div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
+        
+        
         <section id="contacto" class="seccion">
             <div class="contenido">
-                <h2>Información de Contacto</h2>
+                <h2 style="color:rgb(205, 197, 197) ">Información de Contacto</h2>
                 <div class="contacto-info">
                     <div class="contacto-item">
                         <i class="fas fa-user"></i>
@@ -139,7 +162,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Nicolas Ezequiel Sanchez. Todos los derechos reservados.</p>
+
         <div class="redes-sociales">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
